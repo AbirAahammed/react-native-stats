@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, {useState } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -14,6 +14,9 @@ import {
   View,
   Text,
   StatusBar,
+  Button,
+  Switch,
+  Alert
 } from 'react-native';
 
 import {
@@ -25,6 +28,8 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 const App: () => React$Node = () => {
+  const [isEnabled, setIsEnabled] = useState(false);
+  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -65,6 +70,24 @@ const App: () => React$Node = () => {
               </Text>
             </View>
             <LearnMoreLinks />
+            <View style={styles.sectionContainer}>
+              <Text>Debug</Text>
+              <Button
+                onPress={() => Alert.alert('Simple Button pressed')}
+                title="Learn More"
+                color="#841584"
+                accessibilityLabel="Learn more about this purple button"
+                />
+            </View>
+            <View style={styles.container}>
+              <Switch
+                trackColor={{ false: "#767577", true: "#81b0ff" }}
+                thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
+                ios_backgroundColor="#3e3e3e"
+                onValueChange={toggleSwitch}
+                value={isEnabled}
+              />
+            </View>
           </View>
         </ScrollView>
       </SafeAreaView>
