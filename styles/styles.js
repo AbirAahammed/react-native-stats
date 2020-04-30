@@ -15,6 +15,9 @@ export const styles = StyleSheet.create({
         color: 'blue',
         fontWeight: 'bold',
         textAlign: 'center'
+    },
+    menu: {
+        fontSize: 25
     }
 
 });

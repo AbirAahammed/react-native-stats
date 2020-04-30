@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, Button, TouchableOpacity } from 'react-native';
 
-import { styles } from './styles/styles';
+import { styles } from '../styles/styles';
 import { color } from 'react-native-reanimated';
 
 class Feed extends Component {
@@ -13,7 +13,7 @@ class Feed extends Component {
         <Text style={styles.underLineText}>Your underline Text</Text>
       </TouchableOpacity>
             </View>
-        )
+        );
     }
 }
 
