@@ -19,5 +19,4 @@ export const styles = StyleSheet.create({
     menu: {
         fontSize: 25
     }
-
 });
