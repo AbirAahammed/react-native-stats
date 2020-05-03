@@ -2,6 +2,8 @@ import * as React from 'react';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { Button, View } from 'react-native';
+
 import { styles } from './styles/styles';
 
 import Feed from './components/feed'
@@ -12,6 +14,7 @@ import Info from './components/info'
 
 
 const Tab = createMaterialBottomTabNavigator();
+
 const MyTheme = {
   ...DefaultTheme,
   colors: {
