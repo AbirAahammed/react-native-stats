@@ -5,13 +5,13 @@ import { styles } from '../styles/styles';
 import { color } from 'react-native-reanimated';
 
 class Feed extends Component {
-    render () {
+    render() {
         return (
             <View style={styles.center}>
                 <Text style={styles.title}>Navigation Drawer</Text>
                 <TouchableOpacity>
-        <Text style={styles.underLineText}>Your underline Text</Text>
-      </TouchableOpacity>
+                    <Text style={styles.underLineText}>Your underline Text</Text>
+                </TouchableOpacity>
             </View>
         );
     }

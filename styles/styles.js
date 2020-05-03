@@ -16,7 +16,18 @@ export const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center'
     },
+    homeOptions: {
+        fontSize: 22,
+        color: 'blue',
+        fontWeight: 'bold',
+        textAlign: 'center'
+    },
     menu: {
         fontSize: 25
-    }
+    },
+    container: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center"
+      }
 });
