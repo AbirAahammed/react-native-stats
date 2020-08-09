@@ -1,13 +1,28 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
-
+import {StyleSheet, View, Text, ImageBackground } from 'react-native';
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      justifyContent: 'center', 
+      alignItems: 'center'
+    },
+    image: {
+        flex: 1,
+        resizeMode: "cover",
+        justifyContent: "center"
+      }
+  });
 
 class Info extends Component {
     render() {
         return (
-            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                <Text>Info!</Text>
+            <ImageBackground source={require('../assets/drone.jpg')} style={styles.image}>
+
+            <View style={styles.container}>
+                    <Text>Info!</Text>
             </View>
+            </ImageBackground>
+
         );
     }
 }
